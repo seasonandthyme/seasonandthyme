@@ -16,16 +16,16 @@
 
   <body id="collection-54438740e4b0ea3fd729f2cd" class="info-page-layout-offset mobile-background-image tagline-and-contact-info-show-tagline-only site-border-none social-icon-style-round    show-category-navigation   event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts      gallery-design-grid aspect-ratio-auto lightbox-style-dark gallery-navigation-simple gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-round-corners gallery-transitions-fade gallery-show-arrows   gallery-loop product-list-titles-under product-list-alignment-left product-item-size-11-square product-image-auto-crop product-gallery-size-11-square product-gallery-auto-crop show-product-price show-product-item-nav product-social-sharing tweak-v1-related-products-image-aspect-ratio-11-square tweak-v1-related-products-details-alignment-center newsletter-style-dark hide-opentable-icons opentable-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square image-block-poster-text-alignment-center image-block-card-dynamic-font-sizing image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-dynamic-font-sizing image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-dynamic-font-sizing image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-dynamic-font-sizing image-block-stack-text-alignment-left button-style-solid button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd collection-54438740e4b0ea3fd729f2cd collection-type-template-page collection-layout-default view-list mobile-style-available" cz-shortcut-listen="true">
     <div id="fb-root"></div><script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-    <div id="outerWrapper" style="background-image: url('./images/background.jpg'); ">
-      <div id="bgOverlay"></div>
+    <div id="outerWrapper" style="background-image: url('./images/background.jpg');padding-bottom: 15em">
+      <div id="bgOverlay" style="background-color: rgba(34,52,89,0.9);"></div>
       <!--HEADER-->
       <header id="header">
             <!--MAIN NAVIGATION-->
       <!--MOBILE-->
-      <nav id="mobile-navigation" data-content-field="navigation-mobileNav">
+      <nav id="mobile-navigation" data-content-field="navigation-mobileNav" style="position: absolute;z-index: 2;">
         <span id="mobile-navigation-label"></span>
         <ul>
-          <li class='home'><a href='/'>Barnes Book Festival</a></li><br>
+          <li class='home'><a href='/'>Barnes Book Festival</a></li>
           {% for page in site.pages %}
             <li class={{ page.filename }}><a href={{ page.filename }}>{{ page.title }}</a></li>
           {% endfor %}
@@ -36,7 +36,7 @@
           </div>
         </ul>
       </nav>
-      <nav id="main-navigation" data-content-field="navigation-mainNav">
+      <nav id="main-navigation" data-content-field="navigation-mainNav" style="position: absolute;z-index: 1;">
         <ul class="cf">
           <li class='home'><a href='/'>Barnes Book Festival</a></li><br>
           {% for page in site.pages %}
@@ -52,7 +52,7 @@
       </header>
       <!--SITE TITLE OR LOGO-->
       <div id="innerWrapper">
-        <div id="title-area" class="show relative" style="background-color:rgba(117,120,165,0.96);">
+        <div id="title-area" class="show relative" style="position: absolute;padding-top: 8em;padding-bottom: 0em;margin-bottom: 0em !important;z-index: 0;">
           {{ content }}
 
           <!--SITE contact info-->

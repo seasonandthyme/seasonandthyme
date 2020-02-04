@@ -7,4 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   } else {
     $('.home').addClass('active-link');
   }
+  $('#mobile-navigation-label').on('click', function() {
+    $('#mobile-navigation').toggleClass('sqs-mobile-nav-open');
+  });
 });
