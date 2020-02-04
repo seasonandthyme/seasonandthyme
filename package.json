@@ -24,10 +24,17 @@
   },
   "homepage": "https://github.com/batzner/github-pages-boilerplate#readme",
   "devDependencies": {
-    "@babel/core": "~7.0.0",
-    "@babel/preset-env": "~7.0.0",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "del": "~3.0.0",
     "gulp": "~4.0.0",
-    "gulp-babel": "~8.0.0",
-    "del": "~3.0.0"
+    "gulp-babel": "~8.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }

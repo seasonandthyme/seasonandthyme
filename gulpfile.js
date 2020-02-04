@@ -4,6 +4,8 @@
  * Basic concept follows https://www.justinmccandless.com/post/a-tutorial-for-getting-started-with-gulp/
  */
 const gulp = require('gulp');
+const fs = require("fs");
+const browserify = require("browserify");
 
 // Include plug-ins
 const babel = require('gulp-babel');
@@ -24,11 +26,10 @@ function _copy() {
 
 // Transpile the javascript files to ES5 in the dist directory (in-place)
 function _javascripts() {
-    return gulp.src('js/**/*.js', {base: distDir, cwd: distDir})
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(gulp.dest(distDir));
+    return browserify(['./src/js/main.js'])
+      .transform("babelify", {presets: ["@babel/preset-env", "@babel/react"]})
+      .bundle()
+      .pipe(fs.createWriteStream(distDir + 'js/main.js'));
 };
 
 // Default task producing a jekyll-ready site in the dist folder
