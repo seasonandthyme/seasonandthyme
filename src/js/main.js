@@ -1,6 +1,10 @@
-[1,2,3].forEach(x => showItWorks());
+import $ from 'jquery';
 
-
-function showItWorks() {
-    document.getElementById("javascript-status").innerHTML = "JavaScript transpilation works!"
-}
+document.addEventListener("DOMContentLoaded", function(event) {
+  var uri = window.location.href.match(/^.*\/\/.*\/(.*)/)[1];
+  if (uri) {
+    $('.' + uri).addClass('active-link');
+  } else {
+    $('.home').addClass('active-link');
+  }
+});
