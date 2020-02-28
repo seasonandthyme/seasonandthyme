@@ -11,7 +11,7 @@ const browserify = require("browserify");
 const babel = require('gulp-babel');
 
 // Base for specifying paths in gulp.src and gulp.dest
-const distDir = './docs';
+const distDir = './';
 
 // Copy all files to the dist directory. On the master-branch, we cannot clean the dist directory
 // first if it is the root directory.
